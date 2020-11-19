@@ -18,7 +18,7 @@ comp = { "left": {
     } 
  
 # Connect Arduino Board #
-board = pyfirmata.Arduino('/dev/ttyAMA0')
+board = pyfirmata.Arduino('/dev/ttyACM0')
 leftPower = board.get_pin("d:{0}:p".format(comp["left"]["powerPin"]))
 rightPower = board.get_pin("d:3:p".format(comp["right"]["powerPin"]))
 leftDir = board.get_pin("d:22:o".format(comp["left"]["dirPin"]))
