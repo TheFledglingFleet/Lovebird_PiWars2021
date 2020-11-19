@@ -6,7 +6,7 @@ import pyfirmata
 class Lovebird():
 
     def __init__(self):
-        board = pyfirmata.Arduino('/dev/ttyACM0')
+        board = pyfirmata.ArduinoMega('/dev/ttyACM0')
         self.leftPower = board.get_pin("d:2:p")
         self.rightPower = board.get_pin("d:22:p")
         self.leftDir = board.get_pin("d:3:o")
