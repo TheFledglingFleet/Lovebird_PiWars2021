@@ -13,8 +13,8 @@ comp = { "left": {
       "right": { 
         "power": 0, 
         "direction": 0, 
-        "powerPin": 2 , 
-        "dirPin":22 } 
+        "powerPin": 3 , 
+        "dirPin":23 } 
     } 
  
 # Connect Arduino Board #
