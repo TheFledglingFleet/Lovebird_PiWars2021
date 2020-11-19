@@ -19,10 +19,10 @@ comp = { "left": {
  
 # Connect Arduino Board #
 board = pyfirmata.Arduino('/dev/ttyACM0')
-leftPower = board.get_pin("d:{0}:p".format(comp["left"]["powerPin"]))
-rightPower = board.get_pin("d:3:p".format(comp["right"]["powerPin"]))
-leftDir = board.get_pin("d:22:o".format(comp["left"]["dirPin"]))
-rightDir = board.get_pin("d:23:o".format(comp["right"]["dirPin"]))
+leftPower = board.get_pin("d:2:p")
+rightPower = board.get_pin("d:3:p")
+leftDir = board.get_pin("d:22:o")
+rightDir = board.get_pin("d:23:o")
  
 # Run Code Until Interruption #
 while 1:
