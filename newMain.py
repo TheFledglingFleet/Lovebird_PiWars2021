@@ -1,5 +1,5 @@
 from inputs import get_gamepad
-from robot import Lovebird
+from robot.py import Lovebird
 
 myRobot = Lovebird("Tessle")
 
