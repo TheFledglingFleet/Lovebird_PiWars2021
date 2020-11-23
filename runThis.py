@@ -1,5 +1,6 @@
 import inputs
 import pyfirmata
+from inputs import get_gamepad
 
 class Lovebird():
 
