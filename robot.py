@@ -1,5 +1,4 @@
 #Not Currently in use in main, but for future use
-
 import inputs
 import pyfirmata
 
@@ -8,7 +7,7 @@ class Lovebird():
     def __init__(self, robotName):
         board = pyfirmata.ArduinoMega('/dev/ttyACM0')
         self.name = robotName
-        if (robotName == "Lovebird")
+        if (robotName == "Lovebird"):
             self.leftPower = board.get_pin("d:2:p")
             self.rightPower = board.get_pin("d:3:p")
             self.leftDir = board.get_pin("d:22:o")
