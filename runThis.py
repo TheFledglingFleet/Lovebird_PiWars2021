@@ -34,9 +34,9 @@ class Lovebird():
             self.rightPower.write(abs(right))
 
         elif self.name == "Tessle":
-            #self.leftPower.write( int( (leftMotor/255) *180) - 90 )
-            #self.rightPower.write( int( (rightMotor/255) *180) - 90)
-            print( int( ( leftMotor/255 )*180)-90 )
+            self.leftPower.write( int( (leftMotor/255) *180))
+            self.rightPower.write( int( (rightMotor/255) *180))
+            print( int( ( leftMotor/255 )*180))
         
 
 myRobot = Lovebird("Tessle")
