@@ -21,14 +21,14 @@ class Lovebird():
             left = (leftMotor - 127) * 2
             right = (rightMotor - 127) * 2
             if left > 0:
-                leftDir.write(1)
+                self.leftDir.write(1)
             else: 
-                leftDir.write(0)
+                self.leftDir.write(0)
         
             if right > 0:
-                rightMotor.write(1)
+                self.rightDir.write(1)
             else: 
-                rightMotor.write(0)
+                self.rightDir.write(0)
         
             self.leftPower.write(abs(left))
             self.rightPower.write(abs(right))
