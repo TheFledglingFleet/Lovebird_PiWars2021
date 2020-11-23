@@ -1,7 +1,7 @@
 from inputs import get_gamepad
-from robot.py import Lovebird
+import robot
 
-myRobot = Lovebird("Tessle")
+myRobot = robot.Lovebird("Tessle")
 
 while 1:
     events = get_gamepad()
