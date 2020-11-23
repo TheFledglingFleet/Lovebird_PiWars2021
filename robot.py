@@ -14,7 +14,7 @@ class Lovebird():
             self.rightDir = board.get_pin("d:23:o")
         elif (robotName == "Tessle"):
             self.leftPower = board.get_pin("d:2:s")
-            self.rightPower = board.get_pin("d:3:p")
+            self.rightPower = board.get_pin("d:3:s")
         
     def drive(self, leftMotor, rightMotor): #values between -255, 255
         if self.name == "Lovebird":
