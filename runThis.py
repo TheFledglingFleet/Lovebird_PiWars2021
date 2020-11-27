@@ -36,7 +36,8 @@ class Lovebird():
         elif self.name == "Tessle":
             self.leftPower.write( int( (leftMotor/255) *180))
             self.rightPower.write( int( (rightMotor/255) *180))
-            
+        
+        print(self.leftPower, self.rightPower)
         
 
 myRobot = Lovebird("Tessle")
