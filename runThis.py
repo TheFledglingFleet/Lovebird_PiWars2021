@@ -22,12 +22,12 @@ class Lovebird():
             rightMotor = int(abs(right - 127) * 2)
             
             print(leftMotor, rightMotor)
-            if left > 0:
+            if left > 127:
                 self.leftDir.write(1)
             else: 
                 self.leftDir.write(0)
         
-            if right > 0:
+            if right > 127:
                 self.rightDir.write(1)
             else: 
                 self.rightDir.write(0)
