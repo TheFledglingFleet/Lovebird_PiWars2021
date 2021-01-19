@@ -22,7 +22,7 @@ class Lovebird():
             rightMotor = abs(right)
             
             print(left, right)
-            
+            '''
             if left > 0:
                 self.leftDir.write(1)
             else: 
@@ -32,7 +32,7 @@ class Lovebird():
                 self.rightDir.write(1)
             else: 
                 self.rightDir.write(0)
-        
+            '''
             self.leftPower.write(int(leftMotor))
             self.rightPower.write(int(rightMotor))
             
