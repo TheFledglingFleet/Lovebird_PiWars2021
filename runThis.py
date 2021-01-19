@@ -40,7 +40,7 @@ class Lovebird():
         print(leftMotor, rightMotor)
         
 
-myRobot = Lovebird("Tessle")
+myRobot = Lovebird("Lovebird")
 left, right = 0, 0
 
 while 1:

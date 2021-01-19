@@ -6,7 +6,6 @@ left, right = 0, 0
 
 while 1:
     events = get_gamepad()
-
     for event in events:
         if event.code == "ABS_Y":
             left = event.state
