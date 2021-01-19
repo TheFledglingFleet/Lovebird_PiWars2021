@@ -31,8 +31,8 @@ class Lovebird():
             else: 
                 self.rightDir.write(0)
         
-            self.leftPower.write(abs(left))
-            self.rightPower.write(abs(right))
+            self.leftPower.write(abs(leftMotor))
+            self.rightPower.write(abs(rightMotor))
 
         elif self.name == "Tessle":
             self.leftPower.write( int( (leftMotor/255) *180))
