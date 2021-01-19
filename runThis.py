@@ -20,6 +20,7 @@ class Lovebird():
         if self.name == "Lovebird":
             left = (leftMotor - 127) * 2
             right = (rightMotor - 127) * 2
+            print(left, right)
             if left > 0:
                 self.leftDir.write(1)
             else: 
