@@ -18,10 +18,10 @@ class Lovebird():
         
     def drive(self, left, right): #values between 0, 255
         if self.name == "Lovebird":
-            leftMotor = abs(left)
-            rightMotor = abs(right)
+            leftMotor = int(abs(left - 127) * 2)
+            rightMotor = int(abs(right - 127) * 2)
             
-            print(left, right)
+            print(leftMotor, rightMotor)
             if left > 0:
                 self.leftDir.write(1)
             else: 
@@ -32,8 +32,8 @@ class Lovebird():
             else: 
                 self.rightDir.write(0)
             
-            self.leftPower.write(int(leftMotor))
-            self.rightPower.write(int(rightMotor))
+            self.leftPower.write(leftMotor)
+            self.rightPower.write(rightMotor)
             
         elif self.name == "Tessle":
             self.leftPower.write( int( (leftMotor/255) *180))
