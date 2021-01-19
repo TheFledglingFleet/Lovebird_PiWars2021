@@ -25,6 +25,7 @@ class Lovebird():
             print("Woof")
             print(leftMotor, rightMotor)
             print("\n")
+            '''
             if left > 0:
                 self.leftDir.write(1)
             else: 
@@ -35,9 +36,9 @@ class Lovebird():
             else: 
                 self.rightDir.write(0)
         
-            self.leftPower.write(int(left))
-            self.rightPower.write(int(right))
-
+            #self.leftPower.write(int(left))
+            #self.rightPower.write(int(right))
+            '''
         elif self.name == "Tessle":
             self.leftPower.write( int( (leftMotor/255) *180))
             self.rightPower.write( abs( 180 - int( (rightMotor/255) *180) ) )
