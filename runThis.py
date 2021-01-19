@@ -20,7 +20,11 @@ class Lovebird():
         if self.name == "Lovebird":
             left = abs(leftMotor)
             right = abs(rightMotor)
+            print("Meow")
             print(left, right)
+            print("Woof")
+            print(leftMotor, rightMotor)
+            print("\n")
             if left > 0:
                 self.leftDir.write(1)
             else: 
@@ -38,7 +42,6 @@ class Lovebird():
             self.leftPower.write( int( (leftMotor/255) *180))
             self.rightPower.write( abs( 180 - int( (rightMotor/255) *180) ) )
         
-        print(leftMotor, rightMotor)
         
 
 myRobot = Lovebird("Lovebird")
