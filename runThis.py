@@ -16,16 +16,16 @@ class Lovebird():
             self.leftPower = board.get_pin("d:2:s")
             self.rightPower = board.get_pin("d:3:s")
         
-    def drive(self, leftMotor, rightMotor): #values between 0, 255
+    def drive(self, left, right): #values between 0, 255
         if self.name == "Lovebird":
-            left = abs(leftMotor)
-            right = abs(rightMotor)
+            leftMotor = abs(leftMotor)
+            rightMotor = abs(rightMotor)
             print("Meow")
             print(left, right)
             print("Woof")
             print(leftMotor, rightMotor)
             print("\n")
-            '''
+            
             if left > 0:
                 self.leftDir.write(1)
             else: 
@@ -36,9 +36,9 @@ class Lovebird():
             else: 
                 self.rightDir.write(0)
         
-            #self.leftPower.write(int(left))
-            #self.rightPower.write(int(right))
-            '''
+            self.leftPower.write(int(leftMotor))
+            self.rightPower.write(int(rightMotor))
+            
         elif self.name == "Tessle":
             self.leftPower.write( int( (leftMotor/255) *180))
             self.rightPower.write( abs( 180 - int( (rightMotor/255) *180) ) )
