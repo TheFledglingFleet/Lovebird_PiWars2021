@@ -18,8 +18,8 @@ class Lovebird():
         
     def drive(self, left, right): #values between 0, 255
         if self.name == "Lovebird":
-            leftMotor = abs(leftMotor)
-            rightMotor = abs(rightMotor)
+            leftMotor = abs(left)
+            rightMotor = abs(right)
             
             print(left, right)
             
