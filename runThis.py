@@ -20,11 +20,8 @@ class Lovebird():
         if self.name == "Lovebird":
             leftMotor = abs(leftMotor)
             rightMotor = abs(rightMotor)
-            print("Meow")
+            
             print(left, right)
-            print("Woof")
-            print(leftMotor, rightMotor)
-            print("\n")
             
             if left > 0:
                 self.leftDir.write(1)
