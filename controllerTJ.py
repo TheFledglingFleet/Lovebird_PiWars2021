@@ -2,6 +2,7 @@ import bluetooth
 
 target_name = "HC-06"
 target_address = None
+port = 3
 
 nearby_devices = bluetooth.discover_devices()
 
