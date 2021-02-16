@@ -17,11 +17,11 @@ if target_address is not None:
     c = BluetoothClient(target_address, data_received)
     while(1):
         events = get_gamepad()
-            for event in events:
-                if event.code == "ABS_Y":
-                    left = int(event.state)
+        for event in events:
+            if event.code == "ABS_Y":
+                left = int(event.state)
             
-                if event.code == "ABS_RZ":
-                    right = int(event.state)
-            c.send("<{0},{1}>".format(left, right))
+            if event.code == "ABS_RZ":
+                right = int(event.state)
+        c.send("<{0},{1}>".format(left, right))
 
