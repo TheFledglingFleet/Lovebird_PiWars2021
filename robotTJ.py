@@ -38,7 +38,7 @@ class robot():
                     right = ((int(event.state) - 127) * 2)/maxDivision
             value = "<{0},{1}>".format(left, right)
             print(value)
-            self.c.send(value)
+            #self.c.send(value)
 
 if __name__ == "__main__":
     bot = robot()
