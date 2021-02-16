@@ -22,9 +22,10 @@ class robot():
             self.c = BluetoothClient(self.target_address, self.data_received)
             
     def run(self):
+        left, right = 0, 0
         while(1):
             events = get_gamepad()
-            left, right = 0, 0
+            
             maxSpeed = 40
             maxDivision = 255/maxSpeed
             for event in events:
