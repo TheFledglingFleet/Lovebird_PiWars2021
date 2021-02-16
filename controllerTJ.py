@@ -13,7 +13,7 @@ for bdaddr in nearby_devices:
 if target_address is not None:
     print("found target bluetooth device with address ", target_address)
     sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
-    sock.connect((bd_addr, port))
+    sock.connect((target_address, port))
 
     sock.send("hello!!")
 
