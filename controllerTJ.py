@@ -1,5 +1,6 @@
 import bluetooth
 from inputs import get_gamepad
+from bluedot.btcomm import BluetoothClient
 
 target_name = "HC-06"
 target_address = None
