@@ -1,7 +1,7 @@
 from inputs import get_gamepad
 import robot
 
-myRobot = robot.Lovebird("Tessle")
+myRobot = robot.Lovebird("Lovebird")
 left, right = 0, 0
 
 while 1:
