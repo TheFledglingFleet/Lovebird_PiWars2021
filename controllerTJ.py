@@ -15,7 +15,7 @@ for bdaddr in nearby_devices:
 if target_address is not None:
     print("found target bluetooth device with address ", target_address)
     c = BluetoothClient(target_address, data_received)
-    white(1):
+    while(1):
         events = get_gamepad()
             for event in events:
                 if event.code == "ABS_Y":
