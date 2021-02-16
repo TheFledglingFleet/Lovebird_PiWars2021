@@ -8,6 +8,9 @@ port = 3
 
 nearby_devices = bluetooth.discover_devices()
 
+def data_received(data):
+    print(data)
+	
 for bdaddr in nearby_devices:
     if target_name == bluetooth.lookup_name( bdaddr ):
         target_address = bdaddr
@@ -25,4 +28,3 @@ if target_address is not None:
             if event.code == "ABS_RZ":
                 right = int(event.state)
         c.send("<{0},{1}>".format(left, right))
-
