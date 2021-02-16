@@ -18,7 +18,7 @@ for bdaddr in nearby_devices:
 if target_address is not None:
     print("found target bluetooth device with address ", target_address)
     c = BluetoothClient(target_address, data_received)
-    c.send(bytes("a", 'utf-8'))
+    c.send('a')
 
 else:
     print("could not find target bluetooth device nearby")
