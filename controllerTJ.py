@@ -1,5 +1,5 @@
 import bluetooth
-import bluedot
+from bluedot.btcomm import BluetoothClient
 
 target_name = "HC-06"
 target_address = None
