@@ -25,7 +25,7 @@ class robot():
     def run(self):
         left, right = 0, 0
         while(1):
-            time.sleep(0.005)
+            time.sleep(0.015)
             events = get_gamepad()
             
             maxSpeed = 60
