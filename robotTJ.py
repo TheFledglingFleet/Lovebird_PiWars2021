@@ -28,7 +28,7 @@ class robot():
             time.sleep(0.01)
             events = get_gamepad()
             
-            maxSpeed = 40
+            maxSpeed = 60
             maxDivision = 255/maxSpeed
             for event in events:
                 if event.code == "ABS_Y":
