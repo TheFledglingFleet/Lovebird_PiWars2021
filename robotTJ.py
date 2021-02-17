@@ -32,10 +32,10 @@ class robot():
             maxDivision = 255/maxSpeed
             for event in events:
                 if event.code == "ABS_Y":
-                    left = int((event.state - 127) * 2)/maxDivision
+                    left = int(((event.state - 127) * 2)/maxDivision)
                 
                 if event.code == "ABS_RZ":
-                    right = int((event.state - 127) * 2)/maxDivision
+                    right = int(((event.state - 127) * 2)/maxDivision)
             value = "<{0},{1}>".format(left, right)
             print(value)
             self.c.send(value)
