@@ -5,7 +5,7 @@ from inputs import get_gamepad
 class Lovebird():
 
     def __init__(self, robotName):
-        board = pyfirmata.ArduinoMega('/dev/ttyACM0')
+        board = pyfirmata.ArduinoMega('/dev/ttyAMA0')
         self.name = robotName
         if (robotName == "Lovebird"):
             self.leftPower = board.get_pin("d:2:p")
