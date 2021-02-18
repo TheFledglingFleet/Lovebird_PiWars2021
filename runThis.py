@@ -71,7 +71,7 @@ class Lovebird():
                 self.in4.write(0)
                 self.enb.write(leftMotor)
 
-myRobot = Lovebird("Lovebird")
+myRobot = Lovebird("TJ")
 left, right = 0, 0
 
 while 1:
