@@ -15,7 +15,14 @@ class Lovebird():
         elif (robotName == "Tessle"):
             self.leftPower = board.get_pin("d:2:s")
             self.rightPower = board.get_pin("d:3:s")
-        
+        elif (robotName == "TJ"):
+            self.ena = board.get_pin("d:2:p")
+            self.in1 = board.get_pin("d:51:o")
+            self.in2 = board.get_pin("d:50:o")
+            self.in3 = board.get_pin("d:52:o")
+            self.in4 = board.get_pin("d:53:o")
+            self.enb = board.get_pin("d:3:p")
+            
     def drive(self, left, right): #values between 0, 255
         if self.name == "Lovebird":
             leftMotor = int(abs(left - 127) * 2)/255
@@ -39,12 +46,35 @@ class Lovebird():
             self.leftPower.write( int( (leftMotor/255) *180) )
             self.rightPower.write( abs( 180 - int( (rightMotor/255) *180) ) )
         
-        
+        elif self.name == "TJ":
+            maxSpeed = 60
+            maxDivision = 255/maxSpeed
+            leftMotor = int(((left - 127) * 2)/maxDivision)
+            rightMotor = int(((right - 127) * 2)/maxDivision)
+            
+            if (rightMotor < 0):
+                self.in1.write(0)
+                self.in2.write(1)
+                self.ena.write(rightMotor * -1)
+            elif (rightMotor > 0):
+                self.in1.write(1)
+                self.in2.write(0)
+                self.ena.write(rightMotor)
+            
+            if (leftMotor < 0):
+                self.in3.write(0)
+                self.in4.write(1)
+                self.enb.write(leftMotor * -1)
+            elif (leftMotor > 0):
+                self.in3.write(1)
+                self.in4.write(0)
+                self.enb.write(leftMotor)
 
-myRobot = Lovebird("Lovebird")
+myRobot = Lovebird("TJ")
 left, right = 0, 0
 
 while 1:
+    time.sleep(0.01)
     events = get_gamepad()
     for event in events:
         if event.code == "ABS_Y":
