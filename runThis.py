@@ -52,7 +52,7 @@ class Lovebird():
             maxDivision = 255/maxSpeed
             leftMotor = int(((left - 127) * 2)/maxDivision)
             rightMotor = int(((right - 127) * 2)/maxDivision)
-            
+            print(leftMotor, rightMotor)
             if (rightMotor < 0):
                 self.in1.write(0)
                 self.in2.write(1)
