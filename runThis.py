@@ -1,6 +1,7 @@
 import inputs
 import pyfirmata
 from inputs import get_gamepad
+import time
 
 class Lovebird():
 
