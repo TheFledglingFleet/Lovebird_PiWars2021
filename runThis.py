@@ -48,7 +48,7 @@ class Lovebird():
             self.rightPower.write( abs( 180 - int( (rightMotor/255) *180) ) )
         
         elif self.name == "TJ":
-            maxSpeed = 100
+            maxSpeed = 60
             maxDivision = 255/maxSpeed
             leftMotor = int(((left - 127) * 2)/maxDivision)
             rightMotor = int(((right - 127) * 2)/maxDivision)
