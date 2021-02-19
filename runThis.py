@@ -53,23 +53,9 @@ class Lovebird():
             leftMotor = int(((left - 127) * 2)/maxDivision)
             rightMotor = int(((right - 127) * 2)/maxDivision)
             print(leftMotor, rightMotor)
-            if (rightMotor < 0):
-                self.in1.write(0)
-                self.in2.write(1)
-                self.ena.write(rightMotor * -1)
-            elif (rightMotor > 0):
-                self.in1.write(1)
-                self.in2.write(0)
-                self.ena.write(rightMotor)
+            self.ena.write(rightMotor)
+            self.enb.write(leftMotor)
             
-            if (leftMotor < 0):
-                self.in3.write(0)
-                self.in4.write(1)
-                self.enb.write(leftMotor * -1)
-            elif (leftMotor > 0):
-                self.in3.write(1)
-                self.in4.write(0)
-                self.enb.write(leftMotor)
 
 myRobot = Lovebird("TJ")
 left, right = 0, 0
