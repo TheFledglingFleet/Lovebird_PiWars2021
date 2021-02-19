@@ -55,6 +55,10 @@ class Lovebird():
             print(leftMotor, rightMotor)
             self.ena.write(abs(rightMotor))
             self.enb.write(abs(leftMotor))
+            self.in1.write(0)
+            self.in2.write(1)
+            self.in3.write(0)
+            self.in4.write(1)
             
 
 myRobot = Lovebird("TJ")
