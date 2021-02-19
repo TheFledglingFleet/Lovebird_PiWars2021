@@ -75,7 +75,6 @@ myRobot = Lovebird("TJ")
 left, right = 0, 0
 
 while 1:
-    time.sleep(0.01)
     events = get_gamepad()
     for event in events:
         if event.code == "ABS_Y":
