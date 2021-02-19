@@ -63,12 +63,12 @@ class Lovebird():
                 self.enb.write(rightMotor)
             
             if (leftMotor < 0):
-                self.in1.write(0)
-                self.in2.write(1)
-                self.ena.write(leftMotor * -1)
-            elif (leftMotor >= 0):
                 self.in1.write(1)
                 self.in2.write(0)
+                self.ena.write(leftMotor * -1)
+            elif (leftMotor >= 0):
+                self.in1.write(0)
+                self.in2.write(1)
                 self.ena.write(leftMotor)
             
 
@@ -82,5 +82,5 @@ while 1:
             left = event.state
             
         if event.code == "ABS_RZ":
-            right = event.state * -1
+            right = event.state
     myRobot.drive(left, right) 
