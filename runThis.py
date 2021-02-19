@@ -82,5 +82,5 @@ while 1:
             left = event.state
             
         if event.code == "ABS_RZ":
-            right = event.state
+            right = event.state * -1
     myRobot.drive(left, right) 
